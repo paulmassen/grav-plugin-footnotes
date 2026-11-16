@@ -57,9 +57,9 @@
 .littlefoot__content .footnote-backref { display: none; }
 
 /* ---------- Liste en pied d'article ---------- */
-/* littlefoot la masque à l'écran (`.littlefoot--print`) mais la conserve
-   pour l'impression et pour le cas où le JavaScript ne se charge pas :
-   elle reste alors la seule façon de lire les notes. */
+/* littlefoot marque la liste source avec `.littlefoot--print`, que sa
+   feuille de style masque à l'écran. Une liste placée volontairement avec
+   [references] reste au contraire visible comme bibliographie de l'article. */
 
 .footnotes {
   margin-top: 3rem;
@@ -70,5 +70,7 @@
 }
 .footnotes hr { display: none; }
 .footnotes ol { padding-left: 1.25rem; }
+.footnotes ol.littlefoot--print { display: block; }
 .footnotes li { margin-bottom: .5rem; }
+.footnotes li.littlefoot--print { display: list-item; }
 .footnotes li:target { background: var(--sky-soft, #d9f3ff); border-radius: .25rem; }

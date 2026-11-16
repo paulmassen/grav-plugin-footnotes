@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented in this file.
 
+# 1.1.2
+
+## 2026-11-16
+
+1. [](#bugfix)
+
+    * Kept a footnote list placed with `[references]` visible after littlefoot enhances the page.
+
 # 1.1.1
 
 ## 2026-11-16

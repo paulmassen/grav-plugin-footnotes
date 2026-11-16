@@ -32,7 +32,7 @@ class FootnotesPlugin extends Plugin
         }
 
         $this->enable([
-            'onPageContentProcessed' => ['onPageContentProcessed', -20],
+            'onPageContentProcessed' => ['onPageContentProcessed', -30],
             'onTwigSiteVariables'    => ['onTwigSiteVariables', 0],
         ]);
     }
@@ -59,6 +59,10 @@ class FootnotesPlugin extends Plugin
 
     /**
      * Moves the page's generated footnote list to the [references] placeholder.
+     *
+     * Shortcode Core replaces the shortcode on the same event at priority -10.
+     * This listener must therefore run later (a lower priority) to receive the
+     * rendered placeholder rather than the literal [references] source.
      */
     public function onPageContentProcessed(Event $event): void
     {

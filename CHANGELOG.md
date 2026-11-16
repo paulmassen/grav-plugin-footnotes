@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented in this file.
 
+# 1.1.1
+
+## 2026-11-16
+
+1. [](#bugfix)
+
+    * Fixed `[references]` being processed before Shortcode Core replaced the shortcode, which prevented the generated reference list from being moved.
+
 # 1.1.0
 
 ## 2026-11-16

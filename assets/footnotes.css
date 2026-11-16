@@ -1,0 +1,74 @@
+/* ===================================================================
+   Habillage des notes de bas de page.
+   littlefoot.base.css (officielle, MIT) est chargée avant : tout y est
+   piloté par des variables CSS, on ne fait donc que leur donner les
+   valeurs du thème. Les `var(--token, repli)` gardent le plugin
+   utilisable si le thème change.
+   =================================================================== */
+
+.littlefoot {
+  /* — pastille d'appel — */
+  --button-background-color:        var(--sky-soft, #d9f3ff);
+  --button-text-color:              var(--brand-ink, #006fbb);
+  --button-active-background-color: var(--brand-ink, #006fbb);
+  --button-active-text-color:       #fff;
+  --button-border-radius:           999px;
+  --button-height:                  1.35em;
+  --button-padding:                 0 .5em;
+  --button-margin:                  0 .12em;
+  --button-font-size:               .68em;
+  --button-font-weight:             700;
+
+  /* — bulle — */
+  --popover-background-color:    var(--card, #fff);
+  --popover-text-color:          var(--primary, #152741);
+  --popover-border:              1px solid var(--border, #ced9e5);
+  --popover-border-radius:       var(--radius-lg, .625rem);
+  --popover-shadow:              0 18px 40px -12px rgba(15, 23, 32, .28),
+                                 0 2px 6px rgba(15, 23, 32, .08);
+  --popover-width:               23em;
+  --popover-max-height:          17em;
+  /* Sans cette ligne littlefoot retombe sur `initial`, donc le serif du
+     navigateur — pas celui du thème. */
+  --popover-font-family:         var(--sans, system-ui, sans-serif);
+  --popover-font-size:           .875rem;
+  --popover-line-height:         1.55;
+  --popover-horizontal-padding:  1.1rem;
+  --popover-vertical-padding:    .85rem;
+  --popover-scroll-indicator-color: var(--muted-fg, #505c6b);
+  --popover-z-index:             60;
+}
+
+.littlefoot__button {
+  font-family: inherit;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.35em;
+  vertical-align: .25em;
+}
+.littlefoot__button:focus-visible {
+  outline: 2px solid var(--brand-ink, #006fbb);
+  outline-offset: 2px;
+}
+
+.littlefoot__content p { margin: 0 0 .6rem; }
+.littlefoot__content p:last-child { margin-bottom: 0; }
+.littlefoot__content a { color: var(--brand-ink, #006fbb); overflow-wrap: anywhere; }
+/* La flèche de retour n'a pas de sens dans une bulle. */
+.littlefoot__content .footnote-backref { display: none; }
+
+/* ---------- Liste en pied d'article ---------- */
+/* littlefoot la masque à l'écran (`.littlefoot--print`) mais la conserve
+   pour l'impression et pour le cas où le JavaScript ne se charge pas :
+   elle reste alors la seule façon de lire les notes. */
+
+.footnotes {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border, #ced9e5);
+  font-size: .875rem;
+  color: var(--muted-fg, #505c6b);
+}
+.footnotes hr { display: none; }
+.footnotes ol { padding-left: 1.25rem; }
+.footnotes li { margin-bottom: .5rem; }
+.footnotes li:target { background: var(--sky-soft, #d9f3ff); border-radius: .25rem; }

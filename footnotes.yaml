@@ -1,0 +1,6 @@
+enabled: true
+hover: true
+hover_delay: 250
+dismiss_on_unhover: true
+dismiss_delay: 250
+allow_multiple: false

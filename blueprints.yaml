@@ -1,0 +1,67 @@
+name: Footnotes
+slug: footnotes
+type: plugin
+version: 1.1.0
+description: "Enhances Markdown footnotes with accessible interactive previews and lets authors place the reference list with the [references] shortcode."
+icon: asterisk
+author:
+  name: Paul Massendari
+homepage: https://github.com/paulmassen/grav-plugin-footnotes
+keywords: grav, plugin, markdown, footnotes, references, citations, shortcode
+bugs: https://github.com/paulmassen/grav-plugin-footnotes/issues
+docs: https://github.com/paulmassen/grav-plugin-footnotes/blob/main/README.md
+license: MIT
+compatibility:
+  grav: ['1.7', '2.0']
+dependencies:
+  - { name: grav, version: '>=1.7.42' }
+  - { name: shortcode-core, version: '>=5.3.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin activé
+      highlight: 1
+      options: { 1: Activé, 0: Désactivé }
+      validate: { type: bool }
+
+    comportement:
+      type: section
+      title: Comportement
+      underline: true
+      fields:
+
+        hover:
+          type: toggle
+          label: Ouvrir au survol
+          help: "Au clavier et au toucher, l'ouverture reste au clic quoi qu'il arrive."
+          highlight: 1
+          options: { 1: Activé, 0: Désactivé }
+          validate: { type: bool }
+
+        hover_delay:
+          type: text
+          label: Délai avant ouverture (ms)
+          help: "Évite que la note s'ouvre quand on ne fait que passer dessus."
+          validate: { type: int, min: 0, max: 2000 }
+
+        dismiss_on_unhover:
+          type: toggle
+          label: Fermer en quittant
+          highlight: 1
+          options: { 1: Activé, 0: Désactivé }
+          validate: { type: bool }
+
+        dismiss_delay:
+          type: text
+          label: Délai avant fermeture (ms)
+          validate: { type: int, min: 0, max: 2000 }
+
+        allow_multiple:
+          type: toggle
+          label: Plusieurs notes ouvertes à la fois
+          highlight: 0
+          options: { 1: Activé, 0: Désactivé }
+          validate: { type: bool }

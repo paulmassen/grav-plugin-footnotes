@@ -2,20 +2,24 @@
 
 All notable changes to this project are documented in this file.
 
-## [1.1.0] - 2026-11-16
+# 1.1.0
 
-### Added
+## 2026-11-16
 
-- `[references]` shortcode to place the page's generated Markdown footnote list at a chosen location.
-- GPM metadata and Shortcode Core dependency declaration.
-- English README, MIT license, and release documentation.
+1. [](#new)
 
-### Changed
+    * Added the `[references]` shortcode to place a page's generated Markdown footnote list at a chosen location.
+    * Added GPM metadata and a Shortcode Core dependency declaration.
+    * Added an English README, an MIT license, and release documentation.
 
-- Renamed the plugin from `DAC Footnotes` to the generic `Footnotes` package (`footnotes`).
+2. [](#improved)
 
-## [1.0.0]
+    * Renamed the plugin from DAC Footnotes to the generic Footnotes package (`footnotes`).
 
-### Added
+# 1.0.0
 
-- Interactive Markdown Extra footnote previews powered by littlefoot.
+## 2026-11-16
+
+1. [](#new)
+
+    * Added interactive Markdown Extra footnote previews powered by littlefoot.

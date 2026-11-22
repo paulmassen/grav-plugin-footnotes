@@ -23,12 +23,18 @@
     }
 
     var o = window.footnotesOptions || {};
+    var footnoteLabel = o.footnoteLabel || 'Footnote';
+
 
     // Hover only makes sense with a fine pointer; on touch screens it would
     // activate on the first touch.
     var finePointer = window.matchMedia
       ? window.matchMedia('(hover: hover) and (pointer: fine)').matches
       : false;
+
+    // A bibliography inserted with [references] deliberately keeps its source
+    // list in the document. Littlefoot otherwise marks every now-empty ancestor
+    // of that list as print-only; CSS restores that explicitly marked list.
 
     lf({
       activateOnHover:  Boolean(o.activateOnHover) && finePointer,
@@ -37,8 +43,8 @@
       dismissDelay:     Number(o.dismissDelay) || 0,
       allowMultiple:    Boolean(o.allowMultiple),
       buttonTemplate:
-        '<button aria-label="Note <% number %>" class="littlefoot__button" ' +
-        'title="Note <% number %>" id="<% reference %>" data-footnote-id="<% id %>">' +
+        '<button aria-label="' + footnoteLabel + ' <% number %>" class="littlefoot__button" ' +
+        'title="' + footnoteLabel + ' <% number %>" id="<% reference %>" data-footnote-id="<% id %>">' +
         '<% number %></button>'
     });
   }

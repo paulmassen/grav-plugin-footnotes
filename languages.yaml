@@ -1,0 +1,92 @@
+en:
+  PLUGIN_FOOTNOTES:
+    ENABLED: Enabled
+    DISABLED: Disabled
+    ENABLED_LABEL: Plugin enabled
+    BEHAVIOUR_SECTION: Behaviour
+    OPEN_ON_HOVER: Open on hover
+    OPEN_ON_HOVER_HELP: Keyboard and touch users can still open previews by clicking.
+    HOVER_DELAY: Delay before opening (ms)
+    HOVER_DELAY_HELP: Prevents a preview from opening when the pointer only passes over a footnote.
+    DISMISS_ON_UNHOVER: Close after pointer leave
+    DISMISS_DELAY: Delay before closing (ms)
+    ALLOW_MULTIPLE: Allow multiple previews to remain open
+    SHOW_REFERENCE_BACKLINKS: Show citation return links in reference lists
+    SHOW_REFERENCE_BACKLINKS_HELP: Adds one link per in-text citation. Each link scrolls to the matching citation.
+    JSONLD: Publish references as JSON-LD
+    JSONLD_HELP: Adds a schema.org WebPage “citation” graph listing every footnote of the page in the document head. Enable only when footnotes are bibliographic sources, not explanatory notes.
+    REFERENCES_SECTION: Reference list
+    REFERENCES_AUTO: Show the reference list at the end of the content
+    REFERENCES_AUTO_HELP: Keeps every footnote of the page visible as a bibliography at the end of page.content when the page has no [references] shortcode. When disabled, the list is only shown for printing and without JavaScript.
+    REFERENCES_TITLE: Automatic list heading
+    REFERENCES_TITLE_HELP: Heading inserted above the automatic list, for example “References”. Leave empty for no heading. Not used with [references], which you can precede with your own heading.
+    SEO_SECTION: Structured data
+    JSONLD_ID_SUFFIX: WebPage @id suffix
+    JSONLD_ID_SUFFIX_HELP: Appended to the page URL to build the JSON-LD @id, for example #webpage. Use the suffix of your theme’s WebPage node so that both graphs describe the same page. Leave empty to use the bare page URL.
+    APPEARANCE_SECTION: Appearance
+    BUILT_IN_CSS: Use the plugin stylesheet
+    BUILT_IN_CSS_HELP: Disable to style the footnote buttons, popovers and list from your theme. littlefoot’s base stylesheet is always loaded.
+    FOOTNOTE_LABEL: Footnote
+    INSERT_REFERENCE: "Insert footnote reference: replace 1 with the next number, then add [^1]: …"
+
+fr:
+  PLUGIN_FOOTNOTES:
+    ENABLED: Activé
+    DISABLED: Désactivé
+    ENABLED_LABEL: Plugin activé
+    BEHAVIOUR_SECTION: Comportement
+    OPEN_ON_HOVER: Ouvrir au survol
+    OPEN_ON_HOVER_HELP: Les utilisateurs au clavier et sur écran tactile peuvent toujours ouvrir les aperçus en cliquant.
+    HOVER_DELAY: Délai avant ouverture (ms)
+    HOVER_DELAY_HELP: Empêche l’ouverture d’un aperçu lors d’un simple passage sur une note.
+    DISMISS_ON_UNHOVER: Fermer en quittant
+    DISMISS_DELAY: Délai avant fermeture (ms)
+    ALLOW_MULTIPLE: Autoriser plusieurs aperçus ouverts simultanément
+    SHOW_REFERENCE_BACKLINKS: Afficher les liens de retour dans les références
+    SHOW_REFERENCE_BACKLINKS_HELP: Ajoute un lien pour chaque appel dans le texte. Chaque lien mène à l’appel correspondant.
+    JSONLD: Publier les références en JSON-LD
+    JSONLD_HELP: Ajoute dans l’en-tête du document un graphe schema.org WebPage « citation » qui liste toutes les notes de la page. À activer seulement si les notes sont des sources bibliographiques, pas des notes explicatives.
+    REFERENCES_SECTION: Liste des références
+    REFERENCES_AUTO: Afficher la liste des références en fin de contenu
+    REFERENCES_AUTO_HELP: Garde toutes les notes de la page visibles comme bibliographie à la fin de page.content quand la page ne contient pas le shortcode [references]. Désactivé, la liste n’apparaît qu’à l’impression et sans JavaScript.
+    REFERENCES_TITLE: Titre de la liste automatique
+    REFERENCES_TITLE_HELP: Titre inséré au-dessus de la liste automatique, par exemple « Références ». Laisser vide pour n’afficher aucun titre. Sans effet avec [references], que vous pouvez précéder de votre propre titre.
+    SEO_SECTION: Données structurées
+    JSONLD_ID_SUFFIX: Suffixe de l’@id WebPage
+    JSONLD_ID_SUFFIX_HELP: Ajouté à l’URL de la page pour former l’@id JSON-LD, par exemple #webpage. Reprendre le suffixe du nœud WebPage du thème pour que les deux graphes décrivent la même page. Laisser vide pour utiliser l’URL seule.
+    APPEARANCE_SECTION: Apparence
+    BUILT_IN_CSS: Utiliser la feuille de style du plugin
+    BUILT_IN_CSS_HELP: Désactiver pour styliser les boutons, les bulles et la liste depuis le thème. La feuille de style de base de littlefoot est toujours chargée.
+    FOOTNOTE_LABEL: Note
+    INSERT_REFERENCE: "Insérer un appel de note : remplacez 1 par le numéro suivant, puis ajoutez [^1]: …"
+
+es:
+  PLUGIN_FOOTNOTES:
+    ENABLED: Activado
+    DISABLED: Desactivado
+    ENABLED_LABEL: Plugin activado
+    BEHAVIOUR_SECTION: Comportamiento
+    OPEN_ON_HOVER: Abrir al pasar el cursor
+    OPEN_ON_HOVER_HELP: Las personas que usan teclado o pantalla táctil aún pueden abrir las vistas previas haciendo clic.
+    HOVER_DELAY: Retraso antes de abrir (ms)
+    HOVER_DELAY_HELP: Evita que se abra una vista previa cuando el cursor solo pasa sobre una nota al pie.
+    DISMISS_ON_UNHOVER: Cerrar al salir el cursor
+    DISMISS_DELAY: Retraso antes de cerrar (ms)
+    ALLOW_MULTIPLE: Permitir varias vistas previas abiertas a la vez
+    SHOW_REFERENCE_BACKLINKS: Mostrar enlaces de retorno en la lista de referencias
+    SHOW_REFERENCE_BACKLINKS_HELP: Añade un enlace por cada cita en el texto. Cada enlace lleva a la cita correspondiente.
+    JSONLD: Publicar referencias como JSON-LD
+    JSONLD_HELP: Añade en la cabecera del documento un grafo schema.org WebPage «citation» con todas las notas de la página. Actívelo solo si las notas son fuentes bibliográficas, no notas explicativas.
+    REFERENCES_SECTION: Lista de referencias
+    REFERENCES_AUTO: Mostrar la lista de referencias al final del contenido
+    REFERENCES_AUTO_HELP: Mantiene todas las notas de la página visibles como bibliografía al final de page.content cuando la página no contiene el shortcode [references]. Desactivado, la lista solo aparece al imprimir y sin JavaScript.
+    REFERENCES_TITLE: Título de la lista automática
+    REFERENCES_TITLE_HELP: Título insertado encima de la lista automática, por ejemplo «Referencias». Déjelo vacío para no mostrar título. No se usa con [references], que puede preceder con su propio título.
+    SEO_SECTION: Datos estructurados
+    JSONLD_ID_SUFFIX: Sufijo del @id WebPage
+    JSONLD_ID_SUFFIX_HELP: Se añade a la URL de la página para formar el @id JSON-LD, por ejemplo #webpage. Use el sufijo del nodo WebPage de su tema para que ambos grafos describan la misma página. Déjelo vacío para usar solo la URL.
+    APPEARANCE_SECTION: Apariencia
+    BUILT_IN_CSS: Usar la hoja de estilos del plugin
+    BUILT_IN_CSS_HELP: Desactívelo para dar estilo a los botones, ventanas y lista desde su tema. La hoja de estilos base de littlefoot siempre se carga.
+    FOOTNOTE_LABEL: Nota al pie
+    INSERT_REFERENCE: "Insertar una referencia de nota: sustituya 1 por el número siguiente y añada [^1]: …"

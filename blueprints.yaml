@@ -1,13 +1,14 @@
 name: Footnotes
 slug: footnotes
 type: plugin
-version: 1.1.2
-description: "Enhances Markdown footnotes with accessible interactive previews and lets authors place the reference list with the [references] shortcode."
+version: 1.2.0
+testing: false
+description: "Accessible interactive previews for Markdown footnotes, a reference list placed with [references] or at the end of the content, and optional schema.org citation JSON-LD."
 icon: asterisk
 author:
   name: Paul Massendari
 homepage: https://github.com/paulmassen/grav-plugin-footnotes
-keywords: grav, plugin, markdown, footnotes, references, citations, shortcode
+keywords: grav, plugin, markdown, footnotes, references, citations, bibliography, shortcode, json-ld, schema.org, littlefoot
 bugs: https://github.com/paulmassen/grav-plugin-footnotes/issues
 docs: https://github.com/paulmassen/grav-plugin-footnotes/blob/main/README.md
 license: MIT
@@ -15,6 +16,7 @@ compatibility:
   grav: ['1.7', '2.0']
 dependencies:
   - { name: grav, version: '>=1.7.42' }
+  - { name: php, version: '>=7.3.6' }
   - { name: shortcode-core, version: '>=5.3.0' }
 
 form:
@@ -22,46 +24,123 @@ form:
   fields:
     enabled:
       type: toggle
-      label: Plugin activé
+      label: PLUGIN_FOOTNOTES.ENABLED_LABEL
       highlight: 1
-      options: { 1: Activé, 0: Désactivé }
+      options:
+        1: PLUGIN_FOOTNOTES.ENABLED
+        0: PLUGIN_FOOTNOTES.DISABLED
       validate: { type: bool }
 
-    comportement:
+    behaviour:
       type: section
-      title: Comportement
+      title: PLUGIN_FOOTNOTES.BEHAVIOUR_SECTION
       underline: true
       fields:
 
         hover:
           type: toggle
-          label: Ouvrir au survol
-          help: "Au clavier et au toucher, l'ouverture reste au clic quoi qu'il arrive."
+          label: PLUGIN_FOOTNOTES.OPEN_ON_HOVER
+          help: PLUGIN_FOOTNOTES.OPEN_ON_HOVER_HELP
           highlight: 1
-          options: { 1: Activé, 0: Désactivé }
+          options:
+            1: PLUGIN_FOOTNOTES.ENABLED
+            0: PLUGIN_FOOTNOTES.DISABLED
           validate: { type: bool }
 
         hover_delay:
           type: text
-          label: Délai avant ouverture (ms)
-          help: "Évite que la note s'ouvre quand on ne fait que passer dessus."
+          label: PLUGIN_FOOTNOTES.HOVER_DELAY
+          help: PLUGIN_FOOTNOTES.HOVER_DELAY_HELP
           validate: { type: int, min: 0, max: 2000 }
 
         dismiss_on_unhover:
           type: toggle
-          label: Fermer en quittant
+          label: PLUGIN_FOOTNOTES.DISMISS_ON_UNHOVER
           highlight: 1
-          options: { 1: Activé, 0: Désactivé }
+          options:
+            1: PLUGIN_FOOTNOTES.ENABLED
+            0: PLUGIN_FOOTNOTES.DISABLED
           validate: { type: bool }
 
         dismiss_delay:
           type: text
-          label: Délai avant fermeture (ms)
+          label: PLUGIN_FOOTNOTES.DISMISS_DELAY
           validate: { type: int, min: 0, max: 2000 }
 
         allow_multiple:
           type: toggle
-          label: Plusieurs notes ouvertes à la fois
+          label: PLUGIN_FOOTNOTES.ALLOW_MULTIPLE
           highlight: 0
-          options: { 1: Activé, 0: Désactivé }
+          options:
+            1: PLUGIN_FOOTNOTES.ENABLED
+            0: PLUGIN_FOOTNOTES.DISABLED
+          validate: { type: bool }
+
+    references:
+      type: section
+      title: PLUGIN_FOOTNOTES.REFERENCES_SECTION
+      underline: true
+      fields:
+
+        references_auto:
+          type: toggle
+          label: PLUGIN_FOOTNOTES.REFERENCES_AUTO
+          help: PLUGIN_FOOTNOTES.REFERENCES_AUTO_HELP
+          highlight: 0
+          options:
+            1: PLUGIN_FOOTNOTES.ENABLED
+            0: PLUGIN_FOOTNOTES.DISABLED
+          validate: { type: bool }
+
+        references_title:
+          type: text
+          label: PLUGIN_FOOTNOTES.REFERENCES_TITLE
+          help: PLUGIN_FOOTNOTES.REFERENCES_TITLE_HELP
+
+        show_reference_backlinks:
+          type: toggle
+          label: PLUGIN_FOOTNOTES.SHOW_REFERENCE_BACKLINKS
+          help: PLUGIN_FOOTNOTES.SHOW_REFERENCE_BACKLINKS_HELP
+          highlight: 0
+          options:
+            1: PLUGIN_FOOTNOTES.ENABLED
+            0: PLUGIN_FOOTNOTES.DISABLED
+          validate: { type: bool }
+
+    seo:
+      type: section
+      title: PLUGIN_FOOTNOTES.SEO_SECTION
+      underline: true
+      fields:
+
+        jsonld:
+          type: toggle
+          label: PLUGIN_FOOTNOTES.JSONLD
+          help: PLUGIN_FOOTNOTES.JSONLD_HELP
+          highlight: 0
+          options:
+            1: PLUGIN_FOOTNOTES.ENABLED
+            0: PLUGIN_FOOTNOTES.DISABLED
+          validate: { type: bool }
+
+        jsonld_id_suffix:
+          type: text
+          label: PLUGIN_FOOTNOTES.JSONLD_ID_SUFFIX
+          help: PLUGIN_FOOTNOTES.JSONLD_ID_SUFFIX_HELP
+          placeholder: '#webpage'
+
+    appearance:
+      type: section
+      title: PLUGIN_FOOTNOTES.APPEARANCE_SECTION
+      underline: true
+      fields:
+
+        built_in_css:
+          type: toggle
+          label: PLUGIN_FOOTNOTES.BUILT_IN_CSS
+          help: PLUGIN_FOOTNOTES.BUILT_IN_CSS_HELP
+          highlight: 1
+          options:
+            1: PLUGIN_FOOTNOTES.ENABLED
+            0: PLUGIN_FOOTNOTES.DISABLED
           validate: { type: bool }

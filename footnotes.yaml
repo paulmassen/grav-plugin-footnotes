@@ -4,3 +4,15 @@ hover_delay: 250
 dismiss_on_unhover: true
 dismiss_delay: 250
 allow_multiple: false
+show_reference_backlinks: false
+# Keep the generated footnote list visible as a bibliography at the end of
+# page.content when the page has no [references] shortcode.
+references_auto: false
+# Optional heading inserted above the automatic list (empty = no heading).
+references_title: ''
+# Emit schema.org citation JSON-LD for the page's footnotes.
+jsonld: false
+# Appended to the page URL to build the JSON-LD WebPage @id (e.g. '#webpage').
+jsonld_id_suffix: ''
+# Load the plugin's visual stylesheet (littlefoot's base stylesheet always loads).
+built_in_css: true

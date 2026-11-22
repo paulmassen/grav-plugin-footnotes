@@ -18,10 +18,6 @@ All JavaScript and CSS assets are packaged with the plugin: no third-party CDN r
 - Can describe the footnotes as schema.org citations in JSON-LD, with DOI detection.
 - Settings can be overridden page by page in the front matter.
 
-I can guarantee it works.[^source]
-
-[^source]: Trust me bro.
-
 ## Requirements
 
 - Grav `>= 1.7.42`
@@ -83,9 +79,9 @@ A numbered note.[^1]
 ```
 
 ```markdown
-A note identified by name.[^study-method]
+I can guarantee it works.[^source]
 
-[^study-method]: Details about the study method.
+[^source]: Trust me bro.
 ```
 
 For an editorial workflow, numeric identifiers (`1`, `2`, `3`, …) are often the clearest convention. Named identifiers are useful when they make the source easier to recognise while editing. In either case, use each identifier only once per page.

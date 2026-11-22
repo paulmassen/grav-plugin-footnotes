@@ -18,6 +18,10 @@ All JavaScript and CSS assets are packaged with the plugin: no third-party CDN r
 - Can describe the footnotes as schema.org citations in JSON-LD, with DOI detection.
 - Settings can be overridden page by page in the front matter.
 
+I can guarantee it works.[^source]
+
+[^source]: Trust me bro.
+
 ## Requirements
 
 - Grav `>= 1.7.42`
